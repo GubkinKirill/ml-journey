@@ -1,0 +1,934 @@
+< q1
+Import the numpy package under the name `np` (★☆☆)
+
+< r1
+Импортировать пакет numpy под именем `np`
+
+< h1
+import … as
+
+< q2
+Print the numpy version and the configuration (★☆☆)
+
+< r2
+Вывести версию numpy и её конфигурацию
+
+< h2
+np.__version__, np.show_config
+
+< q3
+Create a null vector of size 10 (★☆☆)
+
+< r3
+Создать нулевой вектор размера 10
+
+< h3
+np.zeros
+
+< q4
+How to find the memory size of any array (★☆☆)
+
+< r4
+Как узнать, сколько памяти занимает массив
+
+< h4
+size, itemsize
+
+< q5
+How to get the documentation of the numpy add function from the command line? (★☆☆)
+
+< r5
+Как получить документацию функции numpy add из командной строки?
+
+< h5
+np.info
+
+< q6
+Create a null vector of size 10 but the fifth value which is 1 (★☆☆)
+
+< r6
+Создать нулевой вектор размера 10, у которого пятый элемент равен 1
+
+< h6
+array[4]
+
+< q7
+Create a vector with values ranging from 10 to 49 (★☆☆)
+
+< r7
+Создать вектор со значениями от 10 до 49
+
+< h7
+arange
+
+< q8
+Reverse a vector (first element becomes last) (★☆☆)
+
+< r8
+Развернуть вектор (первый элемент становится последним)
+
+< h8
+array[::-1]
+
+< q9
+Create a 3x3 matrix with values ranging from 0 to 8 (★☆☆)
+
+< r9
+Создать матрицу 3x3 со значениями от 0 до 8
+
+< h9
+reshape
+
+< q10
+Find indices of non-zero elements from [1,2,0,0,4,0] (★☆☆)
+
+< r10
+Найти индексы ненулевых элементов в [1,2,0,0,4,0]
+
+< h10
+np.nonzero
+
+< q11
+Create a 3x3 identity matrix (★☆☆)
+
+< r11
+Создать единичную матрицу 3x3
+
+< h11
+np.eye
+
+< q12
+Create a 3x3x3 array with random values (★☆☆)
+
+< r12
+Создать массив 3x3x3 со случайными значениями
+
+< h12
+np.random.random
+
+< q13
+Create a 10x10 array with random values and find the minimum and maximum values (★☆☆)
+
+< r13
+Создать массив 10x10 со случайными значениями и найти минимум и максимум
+
+< h13
+min, max
+
+< q14
+Create a random vector of size 30 and find the mean value (★☆☆)
+
+< r14
+Создать случайный вектор размера 30 и найти его среднее значение
+
+< h14
+mean
+
+< q15
+Create a 2d array with 1 on the border and 0 inside (★☆☆)
+
+< r15
+Создать двумерный массив с единицами по краю и нулями внутри
+
+< h15
+array[1:-1, 1:-1]
+
+< q16
+How to add a border (filled with 0's) around an existing array? (★☆☆)
+
+< r16
+Как добавить рамку из нулей вокруг существующего массива?
+
+< h16
+np.pad
+
+< q17
+What is the result of the following expression? (★☆☆)
+```python
+0 * np.nan
+np.nan == np.nan
+np.inf > np.nan
+np.nan - np.nan
+np.nan in set([np.nan])
+0.3 == 3 * 0.1
+```
+
+< r17
+Каким будет результат следующих выражений?
+
+< h17
+NaN = not a number, inf = infinity
+
+< q18
+Create a 5x5 matrix with values 1,2,3,4 just below the diagonal (★☆☆)
+
+< r18
+Создать матрицу 5x5 со значениями 1,2,3,4 под главной диагональю
+
+< h18
+np.diag
+
+< q19
+Create a 8x8 matrix and fill it with a checkerboard pattern (★☆☆)
+
+< r19
+Создать матрицу 8x8 и заполнить её в шахматном порядке
+
+< h19
+array[::2]
+
+< q20
+Consider a (6,7,8) shape array, what is the index (x,y,z) of the 100th element? (★☆☆)
+
+< r20
+Дан массив формы (6,7,8). Каков индекс (x,y,z) сотого элемента?
+
+< h20
+np.unravel_index
+
+< q21
+Create a checkerboard 8x8 matrix using the tile function (★☆☆)
+
+< r21
+Создать шахматную матрицу 8x8 с помощью функции tile
+
+< h21
+np.tile
+
+< q22
+Normalize a 5x5 random matrix (★☆☆)
+
+< r22
+Нормализовать случайную матрицу 5x5
+
+< h22
+(x -mean)/std
+
+< q23
+Create a custom dtype that describes a color as four unsigned bytes (RGBA) (★☆☆)
+
+< r23
+Создать пользовательский dtype, описывающий цвет четырьмя беззнаковыми байтами (RGBA)
+
+< h23
+np.dtype
+
+< q24
+Multiply a 5x3 matrix by a 3x2 matrix (real matrix product) (★☆☆)
+
+< r24
+Перемножить матрицу 5x3 на матрицу 3x2 (настоящее матричное произведение)
+
+< h24
+—
+
+< q25
+Given a 1D array, negate all elements which are between 3 and 8, in place. (★☆☆)
+
+< r25
+Дан одномерный массив: поменять знак у всех элементов от 3 до 8, не создавая копию
+
+< h25
+>, <
+
+< q26
+What is the output of the following script? (★☆☆)
+```python
+# Author: Jake VanderPlas
+print(sum(range(5),-1))
+from numpy import *
+print(sum(range(5),-1))
+```
+
+< r26
+Что выведет следующий скрипт?
+
+< h26
+np.sum
+
+< q27
+Consider an integer vector Z, which of these expressions are legal? (★☆☆)
+```python
+Z**Z
+2 << Z >> 2
+Z <- Z
+1j*Z
+Z/1/1
+Z<Z>Z
+```
+
+< r27
+Дан целочисленный вектор Z. Какие из этих выражений допустимы?
+
+< h27
+—
+
+< q28
+What are the result of the following expressions? (★☆☆)
+```python
+np.array(0) / np.array(0)
+np.array(0) // np.array(0)
+np.array([np.nan]).astype(int).astype(float)
+```
+
+< r28
+Каковы результаты следующих выражений?
+
+< h28
+—
+
+< q29
+How to round away from zero a float array ? (★☆☆)
+
+< r29
+Как округлить массив чисел с плавающей точкой в сторону от нуля?
+
+< h29
+np.uniform, np.copysign, np.ceil, np.abs, np.where
+
+< q30
+How to find common values between two arrays? (★☆☆)
+
+< r30
+Как найти общие значения двух массивов?
+
+< h30
+np.intersect1d
+
+< q31
+How to ignore all numpy warnings (not recommended)? (★☆☆)
+
+< r31
+Как отключить все предупреждения numpy (не рекомендуется)?
+
+< h31
+np.seterr, np.errstate
+
+< q32
+Is the following expressions true? (★☆☆)
+```python
+np.sqrt(-1) == np.emath.sqrt(-1)
+```
+
+< r32
+Верно ли следующее выражение?
+
+< h32
+imaginary number
+
+< q33
+How to get the dates of yesterday, today and tomorrow? (★☆☆)
+
+< r33
+Как получить даты вчера, сегодня и завтра?
+
+< h33
+np.datetime64, np.timedelta64
+
+< q34
+How to get all the dates corresponding to the month of July 2016? (★★☆)
+
+< r34
+Как получить все даты июля 2016 года?
+
+< h34
+np.arange(dtype=datetime64['D'])
+
+< q35
+How to compute ((A+B)*(-A/2)) in place (without copy)? (★★☆)
+
+< r35
+Как вычислить ((A+B)*(-A/2)) на месте, без копий?
+
+< h35
+np.add(out=), np.negative(out=), np.multiply(out=), np.divide(out=)
+
+< q36
+Extract the integer part of a random array of positive numbers using 4 different methods (★★☆)
+
+< r36
+Извлечь целую часть массива случайных положительных чисел четырьмя разными способами
+
+< h36
+%, np.floor, astype, np.trunc
+
+< q37
+Create a 5x5 matrix with row values ranging from 0 to 4 (★★☆)
+
+< r37
+Создать матрицу 5x5, в каждой строке которой значения от 0 до 4
+
+< h37
+np.arange
+
+< q38
+Consider a generator function that generates 10 integers and use it to build an array (★☆☆)
+
+< r38
+Дана генераторная функция, возвращающая 10 целых чисел: построить из неё массив
+
+< h38
+np.fromiter
+
+< q39
+Create a vector of size 10 with values ranging from 0 to 1, both excluded (★★☆)
+
+< r39
+Создать вектор размера 10 со значениями от 0 до 1, не включая границы
+
+< h39
+np.linspace
+
+< q40
+Create a random vector of size 10 and sort it (★★☆)
+
+< r40
+Создать случайный вектор размера 10 и отсортировать его
+
+< h40
+sort
+
+< q41
+How to sum a small array faster than np.sum? (★★☆)
+
+< r41
+Как сложить элементы маленького массива быстрее, чем np.sum?
+
+< h41
+np.add.reduce
+
+< q42
+Consider two random arrays A and B, check if they are equal (★★☆)
+
+< r42
+Даны два случайных массива A и B: проверить, равны ли они
+
+< h42
+np.allclose, np.array_equal
+
+< q43
+Make an array immutable (read-only) (★★☆)
+
+< r43
+Сделать массив неизменяемым (только для чтения)
+
+< h43
+flags.writeable
+
+< q44
+Consider a random 10x2 matrix representing cartesian coordinates, convert them to polar coordinates (★★☆)
+
+< r44
+Дана случайная матрица 10x2 с декартовыми координатами: перевести их в полярные
+
+< h44
+np.sqrt, np.arctan2
+
+< q45
+Create random vector of size 10 and replace the maximum value by 0 (★★☆)
+
+< r45
+Создать случайный вектор размера 10 и заменить максимальное значение нулём
+
+< h45
+argmax
+
+< q46
+Create a structured array with `x` and `y` coordinates covering the [0,1]x[0,1] area (★★☆)
+
+< r46
+Создать структурированный массив с координатами `x` и `y`, покрывающими область [0,1]x[0,1]
+
+< h46
+np.meshgrid
+
+< q47
+Given two arrays, X and Y, construct the Cauchy matrix C (Cij =1/(xi - yj)) (★★☆)
+
+< r47
+Даны массивы X и Y: построить матрицу Коши C (Cij = 1/(xi - yj))
+
+< h47
+np.subtract.outer
+
+< q48
+Print the minimum and maximum representable values for each numpy scalar type (★★☆)
+
+< r48
+Вывести минимальное и максимальное представимые значения для каждого скалярного типа numpy
+
+< h48
+np.iinfo, np.finfo, eps
+
+< q49
+How to print all the values of an array? (★★☆)
+
+< r49
+Как вывести все значения массива без сокращений?
+
+< h49
+np.set_printoptions
+
+< q50
+How to find the closest value (to a given scalar) in a vector? (★★☆)
+
+< r50
+Как найти в векторе значение, ближайшее к заданному числу?
+
+< h50
+argmin
+
+< q51
+Create a structured array representing a position (x,y) and a color (r,g,b) (★★☆)
+
+< r51
+Создать структурированный массив, представляющий позицию (x,y) и цвет (r,g,b)
+
+< h51
+dtype
+
+< q52
+Consider a random vector with shape (100,2) representing coordinates, find point by point distances (★★☆)
+
+< r52
+Дан случайный вектор формы (100,2) с координатами: найти попарные расстояния между точками
+
+< h52
+np.atleast_2d, T, np.sqrt
+
+< q53
+How to convert a float (32 bits) array into an integer (32 bits) array in place?
+
+< r53
+Как преобразовать массив float32 в массив int32 на месте?
+
+< h53
+view and [:] =
+
+< q54
+How to read the following file? (★★☆)
+```
+1, 2, 3, 4, 5
+6,  ,  , 7, 8
+ ,  , 9,10,11
+```
+
+< r54
+Как прочитать следующий файл?
+
+< h54
+np.genfromtxt
+
+< q55
+What is the equivalent of enumerate for numpy arrays? (★★☆)
+
+< r55
+Что является аналогом enumerate для массивов numpy?
+
+< h55
+np.ndenumerate, np.ndindex
+
+< q56
+Generate a generic 2D Gaussian-like array (★★☆)
+
+< r56
+Сгенерировать двумерный массив, похожий на гауссиану
+
+< h56
+np.meshgrid, np.exp
+
+< q57
+How to randomly place p elements in a 2D array? (★★☆)
+
+< r57
+Как случайным образом разместить p элементов в двумерном массиве?
+
+< h57
+np.put, np.random.choice
+
+< q58
+Subtract the mean of each row of a matrix (★★☆)
+
+< r58
+Вычесть из каждой строки матрицы её среднее значение
+
+< h58
+mean(axis=,keepdims=)
+
+< q59
+How to sort an array by the nth column? (★★☆)
+
+< r59
+Как отсортировать массив по n-му столбцу?
+
+< h59
+argsort
+
+< q60
+How to tell if a given 2D array has null columns? (★★☆)
+
+< r60
+Как определить, есть ли в двумерном массиве нулевые столбцы?
+
+< h60
+any, ~
+
+< q61
+Find the nearest value from a given value in an array (★★☆)
+
+< r61
+Найти в массиве значение, ближайшее к заданному
+
+< h61
+np.abs, argmin, flat
+
+< q62
+Considering two arrays with shape (1,3) and (3,1), how to compute their sum using an iterator? (★★☆)
+
+< r62
+Даны массивы форм (1,3) и (3,1): как вычислить их сумму с помощью итератора?
+
+< h62
+np.nditer
+
+< q63
+Create an array class that has a name attribute (★★☆)
+
+< r63
+Создать класс массива с атрибутом name
+
+< h63
+class method
+
+< q64
+Consider a given vector, how to add 1 to each element indexed by a second vector (be careful with repeated indices)? (★★★)
+
+< r64
+Дан вектор: как прибавить 1 к каждому элементу по индексам из второго вектора (осторожно с повторяющимися индексами)?
+
+< h64
+np.bincount | np.add.at
+
+< q65
+How to accumulate elements of a vector (X) to an array (F) based on an index list (I)? (★★★)
+
+< r65
+Как накопить элементы вектора X в массив F по списку индексов I?
+
+< h65
+np.bincount
+
+< q66
+Considering a (w,h,3) image of (dtype=ubyte), compute the number of unique colors (★★☆)
+
+< r66
+Дано изображение формы (w,h,3) типа ubyte: посчитать количество уникальных цветов
+
+< h66
+np.unique
+
+< q67
+Considering a four dimensions array, how to get sum over the last two axis at once? (★★★)
+
+< r67
+Дан четырёхмерный массив: как получить сумму сразу по двум последним осям?
+
+< h67
+sum(axis=(-2,-1))
+
+< q68
+Considering a one-dimensional vector D, how to compute means of subsets of D using a vector S of same size describing subset  indices? (★★★)
+
+< r68
+Дан одномерный вектор D: как вычислить средние по его подмножествам, используя вектор S той же длины с индексами подмножеств?
+
+< h68
+np.bincount
+
+< q69
+How to get the diagonal of a dot product? (★★★)
+
+< r69
+Как получить диагональ матричного произведения?
+
+< h69
+np.diag
+
+< q70
+Consider the vector [1, 2, 3, 4, 5], how to build a new vector with 3 consecutive zeros interleaved between each value? (★★★)
+
+< r70
+Дан вектор [1, 2, 3, 4, 5]: как построить новый вектор, вставив по 3 нуля между соседними значениями?
+
+< h70
+array[::4]
+
+< q71
+Consider an array of dimension (5,5,3), how to multiply it by an array with dimensions (5,5)? (★★★)
+
+< r71
+Дан массив формы (5,5,3): как умножить его на массив формы (5,5)?
+
+< h71
+array[:, :, None]
+
+< q72
+How to swap two rows of an array? (★★★)
+
+< r72
+Как поменять местами две строки массива?
+
+< h72
+array[[]] = array[[]]
+
+< q73
+Consider a set of 10 triplets describing 10 triangles (with shared vertices), find the set of unique line segments composing all the  triangles (★★★)
+
+< r73
+Даны 10 троек, описывающих 10 треугольников с общими вершинами: найти множество уникальных отрезков, из которых состоят все треугольники
+
+< h73
+repeat, np.roll, np.sort, view, np.unique
+
+< q74
+Given a sorted array C that corresponds to a bincount, how to produce an array A such that np.bincount(A) == C? (★★★)
+
+< r74
+Дан отсортированный массив C, полученный как bincount: как построить массив A такой, что np.bincount(A) == C?
+
+< h74
+np.repeat
+
+< q75
+How to compute averages using a sliding window over an array? (★★★)
+
+< r75
+Как вычислить средние скользящим окном по массиву?
+
+< h75
+np.cumsum, from numpy.lib.stride_tricks import sliding_window_view (np>=1.20.0)
+
+< q76
+Consider a one-dimensional array Z, build a two-dimensional array whose first row is (Z[0],Z[1],Z[2]) and each subsequent row is  shifted by 1 (last row should be (Z[-3],Z[-2],Z[-1]) (★★★)
+
+< r76
+Дан одномерный массив Z: построить двумерный массив, первая строка которого (Z[0],Z[1],Z[2]), а каждая следующая сдвинута на 1 (последняя — (Z[-3],Z[-2],Z[-1]))
+
+< h76
+from numpy.lib import stride_tricks, from numpy.lib.stride_tricks import sliding_window_view (np>=1.20.0)
+
+< q77
+How to negate a boolean, or to change the sign of a float inplace? (★★★)
+
+< r77
+Как инвертировать логическое значение или сменить знак у float на месте?
+
+< h77
+np.logical_not, np.negative
+
+< q78
+Consider 2 sets of points P0,P1 describing lines (2d) and a point p, how to compute distance from p to each line i (P0[i],P1[i])? (★★★)
+
+< r78
+Даны два набора точек P0, P1, задающих прямые на плоскости, и точка p: как вычислить расстояние от p до каждой прямой i (P0[i],P1[i])?
+
+< h78
+—
+
+< q79
+Consider 2 sets of points P0,P1 describing lines (2d) and a set of points P, how to compute distance from each point j (P[j]) to each line i (P0[i],P1[i])? (★★★)
+
+< r79
+Даны два набора точек P0, P1, задающих прямые, и набор точек P: как вычислить расстояние от каждой точки j до каждой прямой i?
+
+< h79
+—
+
+< q80
+Consider an arbitrary array, write a function that extracts a subpart with a fixed shape and centered on a given element (pad with a `fill` value when necessary) (★★★)
+
+< r80
+Дан произвольный массив: написать функцию, извлекающую подмассив фиксированной формы с центром в заданном элементе (дополняя значением `fill`, если нужно)
+
+< h80
+minimum maximum
+
+< q81
+Consider an array Z = [1,2,3,4,5,6,7,8,9,10,11,12,13,14], how to generate an array R = [[1,2,3,4], [2,3,4,5], [3,4,5,6], ..., [11,12,13,14]]? (★★★)
+
+< r81
+Дан массив Z = [1,2,...,14]: как получить массив R = [[1,2,3,4], [2,3,4,5], ..., [11,12,13,14]]?
+
+< h81
+stride_tricks.as_strided, from numpy.lib.stride_tricks import sliding_window_view (np>=1.20.0)
+
+< q82
+Compute a matrix rank (★★★)
+
+< r82
+Вычислить ранг матрицы
+
+< h82
+np.linalg.svd, np.linalg.matrix_rank
+
+< q83
+How to find the most frequent value in an array?
+
+< r83
+Как найти самое частое значение в массиве?
+
+< h83
+np.bincount, argmax
+
+< q84
+Extract all the contiguous 3x3 blocks from a random 10x10 matrix (★★★)
+
+< r84
+Извлечь все смежные блоки 3x3 из случайной матрицы 10x10
+
+< h84
+stride_tricks.as_strided, from numpy.lib.stride_tricks import sliding_window_view (np>=1.20.0)
+
+< q85
+Create a 2D array subclass such that Z[i,j] == Z[j,i] (★★★)
+
+< r85
+Создать подкласс двумерного массива, для которого Z[i,j] == Z[j,i]
+
+< h85
+class method
+
+< q86
+Consider a set of p matrices with shape (n,n) and a set of p vectors with shape (n,1). How to compute the sum of of the p matrix products at once? (result has shape (n,1)) (★★★)
+
+< r86
+Даны p матриц формы (n,n) и p векторов формы (n,1): как вычислить сумму p матричных произведений за один раз? (результат формы (n,1))
+
+< h86
+np.tensordot
+
+< q87
+Consider a 16x16 array, how to get the block-sum (block size is 4x4)? (★★★)
+
+< r87
+Дан массив 16x16: как получить суммы по блокам 4x4?
+
+< h87
+np.add.reduceat, from numpy.lib.stride_tricks import sliding_window_view (np>=1.20.0)
+
+< q88
+How to implement the Game of Life using numpy arrays? (★★★)
+
+< r88
+Как реализовать игру «Жизнь» на массивах numpy?
+
+< h88
+—
+
+< q89
+How to get the n largest values of an array (★★★)
+
+< r89
+Как получить n наибольших значений массива?
+
+< h89
+np.argsort | np.argpartition
+
+< q90
+Given an arbitrary number of vectors, build the cartesian product (every combination of every item) (★★★)
+
+< r90
+Дано произвольное число векторов: построить их декартово произведение (все комбинации всех элементов)
+
+< h90
+np.indices
+
+< q91
+How to create a record array from a regular array? (★★★)
+
+< r91
+Как создать record array из обычного массива?
+
+< h91
+np.core.records.fromarrays
+
+< q92
+Consider a large vector Z, compute Z to the power of 3 using 3 different methods (★★★)
+
+< r92
+Дан большой вектор Z: возвести его в куб тремя разными способами
+
+< h92
+np.power, *, np.einsum
+
+< q93
+Consider two arrays A and B of shape (8,3) and (2,2). How to find rows of A that contain at least one element of each row of B regardless of the order of the elements in B?
+
+< r93
+Даны массивы A и B форм (8,3) и (2,2): как найти строки A, содержащие хотя бы один элемент из каждой строки B, независимо от порядка элементов в B?
+
+< h93
+np.where
+
+< q94
+Considering a 10x3 matrix, extract rows with unequal values (e.g. [2,2,3]) (★★★)
+
+< r94
+Дана матрица 10x3: извлечь строки, в которых не все значения одинаковы (например, [2,2,3])
+
+< h94
+—
+
+< q95
+Convert a vector of ints into a matrix binary representation (★★★)
+
+< r95
+Преобразовать вектор целых чисел в матрицу их двоичных представлений
+
+< h95
+np.unpackbits
+
+< q96
+Given a two dimensional array, how to extract unique rows? (★★★)
+
+< r96
+Дан двумерный массив: как извлечь уникальные строки?
+
+< h96
+np.ascontiguousarray | np.unique
+
+< q97
+Considering 2 vectors A & B, write the einsum equivalent of inner, outer, sum, and mul function (★★★)
+
+< r97
+Даны векторы A и B: записать через einsum аналоги inner, outer, sum и mul
+
+< h97
+np.einsum
+
+< q98
+Considering a path described by two vectors (X,Y), how to sample it using equidistant samples (★★★)?
+
+< r98
+Дан путь, заданный векторами (X,Y): как разбить его на равноудалённые точки?
+
+< h98
+np.cumsum, np.interp
+
+< q99
+Given an integer n and a 2D array X, select from X the rows which can be interpreted as draws from a multinomial distribution with n degrees, i.e., the rows which only contain integers and which sum to n. (★★★)
+
+< r99
+Даны целое n и двумерный массив X: выбрать из X строки, которые можно считать выборкой из мультиномиального распределения с n степенями, то есть строки только из целых чисел, сумма которых равна n
+
+< h99
+np.logical_and.reduce, np.mod
+
+< q100
+Compute bootstrapped 95% confidence intervals for the mean of a 1D array X (i.e., resample the elements of an array with replacement N times, compute the mean of each sample, and then compute percentiles over the means). (★★★)
+
+< r100
+Вычислить бутстрэп-доверительный интервал 95% для среднего одномерного массива X (N раз выбрать элементы с возвращением, посчитать среднее каждой выборки и взять перцентили этих средних)
+
+< h100
+np.percentile

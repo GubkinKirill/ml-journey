@@ -216,3 +216,26 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Editors
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Данные и модели
+data/
+datasets/
+*.csv
+*.tsv
+*.parquet
+*.npy
+*.npz
+*.h5
+*.pkl
+*.joblib
+models/
+checkpoints/
